@@ -11,3 +11,19 @@ export interface AppUserListEntry {
     username: string,
     profilePreviewImage: string
 }
+
+export interface ItemDefinition {
+    id?: number,
+    creator_id: number,
+    minimum?: number,
+    maximum?: number
+}
+
+export interface DailyItemEntry{
+    id?: number,
+    user_id: number,
+    item_id: number,
+    date: string,
+    value?: number,
+    notes: string
+}
