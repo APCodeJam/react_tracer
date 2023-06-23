@@ -39,9 +39,11 @@ const appUserSlice = api.injectEndpoints({
                         }
 
                         localStorage.setItem('appUser', body.username);
-                        localStorage.setItem('userId', (body.id) ? body.id.toString() : "0");
-                        console.log(localStorage.getItem('userId'))
-                        return response.json()
+
+                        let json = await response.json();
+                        localStorage.setItem('userId', (json.id) ? json.id.toString() : "0");
+
+                        return json
                     }
                 }
             },
