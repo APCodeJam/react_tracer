@@ -40,7 +40,7 @@ const appUserSlice = api.injectEndpoints({
 
                         localStorage.setItem('appUser', body.username);
                         localStorage.setItem('userId', (body.id) ? body.id.toString() : "0");
-
+                        console.log(localStorage.getItem('userId'))
                         return response.json()
                     }
                 }

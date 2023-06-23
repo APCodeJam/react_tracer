@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useParams } from 'react-router-dom';
 import { useGetUserByUserNameQuery, useUpdateAppUserMutation } from '../../common/services/appUserSlice'
+import { Link } from 'react-router-dom';
+import { useGetDailyItemEntriesQuery } from '../../common/services/dailyItemEntrySlice';
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -58,7 +60,9 @@ const data = {
   };
 
 function Insights() {
-
+    // const { currentData , isFetching, isError, isLoading, error } = useGetDailyItemEntriesQuery( userName ? userName : '', { refetchOnMountOrArgChange: true } );
+    const { currentData , isFetching, isError, isLoading, error } = useGetDailyItemEntriesQuery("", { refetchOnMountOrArgChange: true });
+    console.log(currentData)
     return (
         <>
         <div className="d-flex justify-content-center">

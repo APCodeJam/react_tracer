@@ -10,7 +10,7 @@ function UserDisplay() {
     const [page, setPage] = useState(1);
 
     const { currentData , isFetching, isError, isLoading, error } = useGetPagedUsernamesQuery( page, { refetchOnMountOrArgChange: true } );
-
+    // console.log(currentData)
     return (
         <div className="d-flex justify-content-center">
             {
