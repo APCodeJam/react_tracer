@@ -3,7 +3,7 @@ import { ItemDefinition } from '../types';
 
 const itemDefinitionSlice = api.injectEndpoints({
     endpoints: (builder) => ({
-        getAllItemDefinitions: builder.query<ItemDefinition, string>({
+        getAllItemDefinitions: builder.query<ItemDefinition[], string>({
             query: () => `itemDefinition/${localStorage.getItem('userId')}`,
             providesTags: ['ItemDefinition'],
         }),

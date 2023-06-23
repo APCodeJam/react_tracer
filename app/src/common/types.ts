@@ -15,6 +15,7 @@ export interface AppUserListEntry {
 export interface ItemDefinition {
     id?: number,
     creator_id: number,
+    name: string,
     minimum?: number,
     maximum?: number
 }

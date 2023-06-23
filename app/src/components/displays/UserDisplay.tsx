@@ -19,7 +19,12 @@ function UserDisplay() {
 
     function UpdateUser() {
         try{
-            email ? email : currentData ? setEmail(currentData.email) : '';
+           if (currentData!=undefined) {
+                setEmail(currentData.email);
+           }
+           else {
+                setEmail('');
+           }
             const payload = update({ 
                 username : userName ? userName : '', 
                 email, 
@@ -36,6 +41,7 @@ function UserDisplay() {
           } catch (error) {
             setDisplayError('Update Failed')
           }
+          return null;
     }
 
     function handleImageSelection(event: { target: { files: any; }; }) {

@@ -12,7 +12,6 @@ import LoginDisplay from './components/displays/LoginDisplay';
 import RegisterDisplay from './components/displays/RegisterDisplay';
 import UserDisplay from './components/displays/UserDisplay';
 import UserListDisplay from './components/displays/UserListDisplay';
-import UserInput from './components/displays/UserInput';
 import Navbar from './components/displays/Navbar';
 import Insights from './components/displays/Insights';
 
@@ -42,7 +41,6 @@ function App() {
               }
             />
             <Route path='/profile/:userName' element={<UserDisplay />} />
-            <Route path='/userinput/:userName' element={<UserInput />} />
             <Route path='/insights/:userName' element={<Insights />} />
           </Route>
         </Routes>
