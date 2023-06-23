@@ -17,5 +17,6 @@ export const api = createApi({
             return headers
         },
     }),
+    tagTypes: ['AppUser', 'ItemDefinition', 'DailyItemEntry'],
     endpoints: () => ({})
 })
