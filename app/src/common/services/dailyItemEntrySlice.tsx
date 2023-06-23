@@ -3,7 +3,7 @@ import { DailyItemEntry } from '../types';
 
 const dailyItemEntrySlice = api.injectEndpoints({
     endpoints: (builder) => ({
-        getDailyItemEntries: builder.query<DailyItemEntry, string>({
+        getDailyItemEntries: builder.query<DailyItemEntry[], string>({
             query: () => `itemDefinition/${localStorage.getItem('userId')}`,
             providesTags: ['DailyItemEntry'],
         }),
