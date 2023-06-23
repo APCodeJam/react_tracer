@@ -63,6 +63,18 @@ const appUserSlice = api.injectEndpoints({
                     return response.text()},
               })
         }),
+        // addItemDefinition: builder.mutation<null, string>({
+        //     query: (body) => ({
+        //         url: 'itemDefinition',
+        //         responseHandler: (response) => {
+        //             localStorage.setItem('token', '');
+        //             return {
+        //                 body
+        //             }
+        //         }
+        //     })
+
+        // })
     }),
     overrideExisting: false
 })

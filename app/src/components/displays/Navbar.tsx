@@ -40,6 +40,12 @@ function Navbar() {
                                 <li className="nav-item">
                                     <Link className="nav-link active" aria-current="page" to='/' onClick={logoutAction}>Logout {localStorage.getItem('appUser')}</Link>
                                 </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link active" aria-current="page" to={`/userinput/${localStorage.getItem('appUser')}`}>User Input</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link active" aria-current="page" to={`/insights/${localStorage.getItem('appUser')}`}>Insights</Link>
+                                </li>
                             </ul> }
                         
                     </div>
